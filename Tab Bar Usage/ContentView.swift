@@ -9,8 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView{
+            
+            TabView{
+                
+                VStack{
+                    Text("Birinci Ekran").font(.largeTitle)
+                }.tabItem{
+                    Image("resim1")
+                    Text("Lokasyon")
+                }.tag(0)
+                
+                VStack{
+                    Text("İkinci Ekran").font(.largeTitle)
+                }.tabItem{
+                    Image("resim2")
+                    Text("Google")
+                }.tag(1)
+                
+            }.navigationTitle("Ana Sayfa").navigationBarTitleDisplayMode(.inline)
+                
+        }
     }
 }
 
